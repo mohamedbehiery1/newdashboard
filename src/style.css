@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "AraHamah1964";
+  font-weight: normal;
+  font-style: normal;
+  src: url("src/fonts/AraHamah1964-Regular/AraHamah1964-Regular.ttf"),
+    url("src/fonts/AraHamah1964-Regular/AraHamah1964-Regular.woff"),
+    url("src/fonts/AraHamah1964-Regular/AraHamah1964-Regular.woff2");
+}
+@font-face {
+  font-family: "AraHamah1964";
+  font-weight: bold;
+  font-style: normal;
+  src: url("src/fonts/AraHamah1964-Bold/AraHamah1964-Bold.ttf"),
+    url("src/fonts/AraHamah1964-Bold/AraHamah1964-Bold.woff"),
+    url("src/fonts/AraHamah1964-Bold/AraHamah1964-Bold.woff2");
+}
+@font-face {
+  font-family: "AlHurra";
+  font-weight: regular;
+  font-style: normal;
+  src: url("src/fonts/AlHurra-Regular/AlHurra-Regular.ttf"),
+    url("src/fonts/AlHurra-Regular/AlHurra-Regular.woff"),
+    url("src/fonts/AlHurra-Regular/AlHurra-Regular.woff2");
+}
+@font-face {
+  font-family: "AlHurra";
+  font-weight: bold;
+  font-style: normal;
+  src: url("src/fonts/AlHurra-Bold/AlHurra-Bold.ttf"),
+    url("src/fonts/AlHurra-Bold/AlHurra-Bold.woff"),
+    url("src/fonts/AlHurra-Bold/AlHurra-Bold.woff2");
+}
+@font-face {
+  font-family: "AlHurra";
+  font-weight: light;
+  font-style: normal;
+  src: url("src/fonts/AlHurra-Light/AlHurra-Light.ttf"),
+    url("src/fonts/AlHurra-Light/AlHurra-Light.woff"),
+    url("src/fonts/AlHurra-Light/AlHurra-Light.woff2");
+}
+@font-face {
+  font-family: "Dubai";
+  font-weight: normal;
+  font-style: normal;
+  src: url("src/fonts/Dubai/dubai.ttf"), url("src/fonts/Dubai/dubai.woff"),
+    url("src/fonts/Dubai/dubai.woff2");
+}
+@font-face {
+  font-family: "Dubai";
+  font-weight: bold;
+  font-style: normal;
+  src: url("src/fonts/Dubai-Bold/dubai-bold.ttf"),
+    url("src/fonts/Dubai-Bold/dubai-bold.woff"),
+    url("src/fonts/Dubai-Bold/dubai-bold.woff2");
+}
+@font-face {
+  font-family: "Dubai";
+  font-weight: medium;
+  font-style: normal;
+  src: url("src/fonts/Dubai-Medium/dubai-medium.ttf"),
+    url("src/fonts/Dubai-Medium/dubai-medium.woff"),
+    url("src/fonts/Dubai-Medium/dubai-medium.woff2");
+}
+@font-face {
+  font-family: "Dubai";
+  font-weight: 300;
+  font-style: normal;
+  src: url("src/fonts/Dubai-Light/dubai-light.ttf"),
+    url("src/fonts/Dubai-Light/dubai-light.woff"),
+    url("src/fonts/Dubai-Light/dubai-light.woff2");
+}

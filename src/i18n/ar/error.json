@@ -1,0 +1,16 @@
+{
+  " Duplicate Email": "البريد الإلكتروني مستخدم من قبل",
+  " Invalid Id": "معرِّف غير صحيح",
+  " Unavailable Merchant": "التاجر غير متاح",
+  " Not Supported Location": "موقع غير مدعوم",
+  " Invalid Current Password": "كلمة المرور الحالية غير صحيحة",
+  " Invalid Password": "كلمة المرور غير صحيحة",
+  " User Email Not Found": "البريد الإلكتروني غير موجود",
+  " Record Not Found": "طلب غير موجود",
+  "401 - Unauthorized": "401",
+  "You don't have access to this page": "لا يمكنك الوصول لهذه الصفحة",
+  "404 - Not Found": "404",
+  "Page not found": "هذه الصفحة غير موجودة",
+  "500 - Server Down": "500",
+  "Something went wrong": "حدث خطأ"
+}

@@ -1,0 +1,133 @@
+{
+  "AWB for": "AWB for Order No. {{orderNumber}}",
+  "Order no.": "Order No. {{orderNumber}}",
+  "Currency": "SAR",
+  "QR Scan Dislaimer": "Scan this code to view location.",
+  "formattedAddress": {
+    "addressLineOne": "$t(formattedAddress.city), $t(formattedAddress.area), $t(formattedAddress.street)",
+    "addressLineTwo": "$t(formattedAddress.houseNumber), $t(formattedAddress.floor), $t(formattedAddress.flat)",
+    "addressExtra": "$t(formattedAddress.landmark)",
+    "city": "{{address.city}}",
+    "area": "{{address.area}}",
+    "street": "Street: {{address.street}}",
+    "houseNumber": "House No.: {{address.houseNumber}}",
+    "floor": "Floor: {{address.floor}}",
+    "flat": "Flat: {{address.flat}}",
+    "landmark": "Notes: {{address.landmark}}"
+  },
+  "planOrders": "Up to {{ordersCount}} orders monthly",
+  "freeTrialDisclaimer": "Enjou a {{freeTrialDays}}-day free trial, then start paying according to your plan",
+  "ORDER_CREATED": "Order created",
+  "ORDER_ASSIGNED": "Assigned to driver",
+  "ORDER_PICKED": "Picked by driver",
+  "ORDER_STARTED": "In transit",
+  "ORDER_FAILED": "Order failed",
+  "ORDER_COMPLETED": "Order completed",
+  "newOrders": "New",
+  "inTransitOrders": "In Transit",
+  "completedOrders": "Completed",
+  "failedOrders": "Failed",
+  "addAssignedDriver": "Assign another driver",
+  "Show new orders": "New orders",
+  "Show being-delivered orders": "In Transit orders",
+  "Show completed orders": "Completed orders",
+  "Show failed orders": "Failed orders",
+  "inArea": "in",
+  "Free": "Free",
+  "costPerOrder": "{{cost}} Halala/order",
+  "deliveringToday": "Hi I'm {{driverName}}, I will be delivering your order from {{merchantName}} today",
+  "onTheWay": "I'm on my way to you",
+  "arrived": "I've arrived at your house",
+  "driverDetails": {
+    "status": "Status",
+    "tracking": "Tracking",
+    "disconnected": "Disconnected",
+    "activeTask": "Task in transit",
+    "phoneNumber": "Phone",
+    "completedOrdersToday": "Completed tasks today",
+    "assignedOrdersToday": "Assigned tasks today",
+    "completedOrdersCurrentWeek": "Completed tasks this week"
+  },
+  "splitOne": {
+    "percentage": "32%",
+    "header": "of customers are turning away from their favorite brand, after just one bad experience!",
+    "source": "source: pwc",
+    "lineOne": "With the Exponential growth of e-commerce, the challenges of last mile services has rapidly increased.",
+    "lineTwo": "The last mile is the backbone of e-commerce, it is crucial to the customer’s brand perception, leaving a lasting impression with each shopping experience.",
+    "footer": "The last mile has never been more important than it is now."
+  },
+  "splitTwo": {
+    "header": "Customers Expectations",
+    "lineOne": "• Accurate location",
+    "lineTwo": "• Fast delivery",
+    "lineThree": "• Flexible deliver times, with the possibility to change",
+    "lineFour": "• Real-time tracking",
+    "lineFive": "• Ability to communicate with the driver."
+  },
+  "importOrdersDialog": {
+    "title": "Import Orders",
+    "message": "You can import orders from an Excel sheet.",
+    "excelSchemaPropmt": "To download Excel sheet schema",
+    "clickHere": "click here",
+    "choose": "Choose File",
+    "cancel": "Cancel",
+    "confirm": "Confirm"
+  },
+  "Show unassigned orders": "New orders (without location)",
+  "phoneVerificationDisclaimer": "A One-Time Password was sent to",
+  "changePhoneDisclaimer": "Enter new phone number",
+  "forgotPassword": {
+    "title": "Forgot Password",
+    "message": "Kindly provide the email address linked to your account and we will email you a link to reset your password",
+    "complete": "Email sent successfully",
+    "sendEmail": "Send"
+  },
+  "resetPassword": {
+    "title": "Reset Password",
+    "complete": "Password was reset successfully",
+    "invalidUrlToken": "Invalid URL",
+    "reset": "Reset",
+    "login": "Login"
+  },
+  "verifyMail": {
+    "title": "Email Verification",
+    "message": "Verifying your email",
+    "complete": "Email verified successfully"
+  },
+  "debtorDisclaimer": "This merchant owes you {{net}} SAR",
+  "creditorDisclaimer": "You should pay this merchant {{net}} SAR",
+  "sidebarStatusDisclaimer": {
+    "BLOCKED": {
+      "lineOne": "Your account is blocked",
+      "lineTwoPartOne": "Contact ",
+      "lineTwoPartTwo": "customer support"
+    },
+    "WAITING": {
+      "lineOne": "Account not activated",
+      "lineTwoPartOne": "Contact ",
+      "lineTwoPartTwo": "customer support"
+    }
+  },
+  "validationErrors": {
+    "isRequired": "* Required field"
+  },
+  "printAWBsDialog": {
+    "title": "Print AWBs",
+    "message": {
+      "regularMerchant": "A PDF file with AWBs for all new orders will be generated.",
+      "shippingCompany": "Choose a merchant to generate a PDF file with AWBs for all new orders."
+    },
+    "cancel": "Cancel",
+    "confirm": "Confirm"
+  },
+  "awb": {
+    "orderNo": "Order No.",
+    "date": "Date: {{date}}",
+    "from": "From",
+    "to": "To",
+    "cod": "{{cod}} SAR",
+    "floor": "Floor No.: {{floor}}",
+    "flat": "Door No.: {{flat}}",
+    "packages": "Packages"
+  }
+}

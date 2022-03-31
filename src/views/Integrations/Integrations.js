@@ -1,0 +1,70 @@
+import { Helmet } from "react-helmet";
+import { Box, Container, Grid } from "@material-ui/core";
+import { useState } from "react";
+import { $APP_NAME } from "src/constants";
+import { ZidForm } from "./components";
+import HttpService from 'src/__services__/httpService';
+import AuthService from "src/__services__/AuthService";
+
+import { $BASE_URL } from "src/constants";
+const apiUrl = $BASE_URL + '/api';
+
+const Integrations = () => {
+
+  const [pendingSubmit, setPendingSubmit] = useState(false);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState();
+
+  const activateZid = async (formData) => {
+    setPendingSubmit(true);
+    setError("");
+    setSuccess(null);
+    const Authorization = "Bearer " + AuthService.getJwt();
+    try {
+      await HttpService.post(
+        `${apiUrl}/v1/merchant-dashboard/integrations/zid`,
+        formData,
+        { headers: { Authorization } }
+      )
+      setSuccess("Activated successfully")
+    } catch (e) {
+      console.log(e)
+      if (e.response && e.response.data) {
+        console.log(e.response)
+        setError(e.response.data.message)
+      }
+    } finally {
+      setPendingSubmit(false);
+    }
+  }
+
+  return (
+    <>
+      <Helmet>
+        <title>Integrations | {$APP_NAME}</title>
+      </Helmet>
+      <Box
+        sx={{
+          backgroundColor: "background.default",
+          minHeight: "100%",
+          py: 3,
+        }}
+      >
+        <Container maxWidth={false}>
+          <Grid container spacing={3}>
+            <Grid item xs={12}>
+              <ZidForm
+                handleSubmit={activateZid}
+                pendingSubmit={pendingSubmit}
+                error={error}
+                success={success}
+              />
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
+    </>
+  )
+}
+
+export default Integrations;
