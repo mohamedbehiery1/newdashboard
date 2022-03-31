@@ -39,7 +39,7 @@ const FollowUpOrderDialog = ({ title,chats, chatData, MerchantName ,handleDismis
 
     const { t } = useTranslation();
     const classes = useStyles();
-    const rowCount = chats.length
+    const rowCount = chats?.length
 
     const renderCell = params => (
         <Typography>
