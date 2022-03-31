@@ -20,7 +20,7 @@ const api = ({ dispatch, getStore }) => (next) => async (action) => {
       url: baseUrl + url,
       method,
       data,
-      headers: { Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2JpbGUiOiIwMDIyMjA5OSIsImlhdCI6MTYzNTg5NTg0MSwiZXhwIjoxOTUxMjU1ODQxfQ.eu8D7aUZ_u-U6zoH41Y4XbRq0wfkBu7kYtVNt1m08c8`, country: localStorage.getItem("country") || "61e888a4f7274d001692753e", languageCode: 'ar' },
+      headers: { Authorization: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2JpbGUiOiIwMDIyMjA5OSIsImlhdCI6MTYzNTg5NTg0MSwiZXhwIjoxOTUxMjU1ODQxfQ.eu8D7aUZ_u-U6zoH41Y4XbRq0wfkBu7kYtVNt1m08c8`, country: localStorage.getItem("country") || "6184aea034e78407518074e8", languageCode: 'ar' },
     });
     // General
     dispatch(apiCallSucceeded(response.data));

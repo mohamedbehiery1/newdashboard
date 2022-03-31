@@ -16,18 +16,18 @@ import {
 
 const countries = [
     {
-      value: "61e888a4f7274d001692753e",
+      value: "6184aea034e78407518074e8",
       label: "Kuwait",
     },
     {
-      value: "61e888eef7274d0016927540",
+      value: "617e7a2e0eb9c0caf3bbacff",
       label: "UAE",
     },
   ];
 
 const SettingsCountry = (props) => {
   const [values, setValues] = useState({
-    country: localStorage.getItem("country") || "61e888a4f7274d001692753e",
+    country: localStorage.getItem("country") || "6184aea034e78407518074e8",
   });
 
   const handleChange = (event) => {
