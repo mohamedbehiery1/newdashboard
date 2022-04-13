@@ -65,6 +65,31 @@ const items = [
     title: "Merchants",
   },
   {
+    href: "/admin/car-origins",
+    icon: PeopleAltRounded,
+    title: "Car Origins",
+  },
+  {
+    href: "/admin/cities",
+    icon: PeopleAltRounded,
+    title: "Cities",
+  },
+  {
+    href: "/admin/specialties",
+    icon: PeopleAltRounded,
+    title: "Specialties",
+  },
+  {
+    href: "/admin/car-brands",
+    icon: PeopleAltRounded,
+    title: "Car Brands",
+  },
+  {
+    href: "/admin/car-models",
+    icon: PeopleAltRounded,
+    title: "Car Models",
+  },
+  {
     href: "/admin/settings",
     icon: SettingsIcon,
     title: "Settings",

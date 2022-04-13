@@ -63,13 +63,13 @@ const MerchantListResults = ({
 
   const getPhoneNumber = params => `${params.row.countryCode}${params.row.mobile}`;
 
-  const getStatus = params => t(params.value);
 
   const columns = [
     { field: "name", headerName: t("Name"), width: $COLUMN_WIDTH * 1.1, renderCell },
     { field: "phoneNumber", valueGetter: getPhoneNumber, headerName: t("Phone"), width: $COLUMN_WIDTH, renderCell },
     { field: "otp",  headerName: t("OTP"), width: $COLUMN_WIDTH * 0.9, renderCell },
     { field: "fullName",  headerName: t("Full Name"), width: 180, renderCell },
+    { field: "id", resizable: false, disableColumnMenu: true, disableClickEventBubbling: true, headerName: t(" "), renderCell: renderActionsCell(idsPendingDelete), },
   ];
 
   return (
@@ -84,7 +84,6 @@ const MerchantListResults = ({
           disableSelectionOnClick
           loading={loading}
           localeText={generateDataGridLocaleText(t)}
-          // onRowClick={row => handleEditClick(row.id)}
           // checkboxSelection
           // autoPageSize
           pagination

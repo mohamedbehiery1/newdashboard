@@ -1,9 +1,9 @@
 import http from "src/__services__/httpService";
 
 import { $BASE_URL } from "src/constants";
-const apiUrl = $BASE_URL + '/api';
+const apiUrl = $BASE_URL;
 
-const apiEndpoint = apiUrl + "/v1/admin-panel/merchant"
+const apiEndpoint = apiUrl + "/merchant"
 
 function merchantUrl(id) {
     return `${apiEndpoint}/${id}`;

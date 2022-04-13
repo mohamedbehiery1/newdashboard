@@ -31,8 +31,7 @@ const FollowUpOrderList = () => {
       chatData.inquiryCode = row.inquiry.inquiryCode
       chatData.carModel = row.inquiry.carModel.name
       setChatData(chatData) 
-      console.log("chaaaaaaaats",chats)
-     setChatList(chats.data.body[0].calls)
+     setChatList(chats.data.body.calls)
      setDialogSettings({
         open: true,
         id: row._id

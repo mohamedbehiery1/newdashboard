@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import { Box, Container, Grid } from "@material-ui/core";
 import { $APP_NAME } from "src/constants";
-import { MerchantProfileDetails } from 'src/components/merchant';
+import  MerchantDetails  from 'src/components/merchant/MerchantDetails';
 import { useTranslation } from 'react-i18next';
 import SubPageHeader from "src/components/subpage-header";
 import { useState } from 'react';
@@ -50,7 +50,7 @@ const AddMerchant = () => {
               <SubPageHeader title={t("Add Merchant")} actionRoute='/admin/merchants' actionTitle={t('Back')} />
             </Grid>
             <Grid item xs={12}>
-              <MerchantProfileDetails
+              <MerchantDetails
                 type="add"
                 // profileDetails={}
                 handleSubmit={addMerchant}

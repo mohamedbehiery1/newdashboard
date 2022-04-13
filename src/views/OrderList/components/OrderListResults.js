@@ -52,9 +52,7 @@ const OrderListResults = ({
     { field: "ownerPhone", headerName: t("Customer Phone"),flex: 1, valueGetter: (params) =>{ return params.row.owner.countryCode+params.row.owner.mobile } ,renderCell },
     { field: "carModel", headerName: t("Car Model"),flex: 1, valueGetter: (params) =>{ return params.row.carModel.name } ,renderCell },
     { field: "carBrand", headerName: t("Car Brand"),flex: 1, valueGetter: (params) =>{ return params.row.carModel.carBrand.name } ,renderCell },
-    // { field: "mobile", headerName: t("Mobile"), flex : 1, renderCell },
-    // { field: "otp", headerName: t("OTP"), flex : 1 , renderCell },
-    // { field: "id", resizable: false, disableColumnMenu: true, disableClickEventBubbling: true, headerName: t(" "), renderCell: renderActionsCell(idsPendingDelete), },
+
   ];
 
 

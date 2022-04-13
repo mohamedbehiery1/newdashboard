@@ -132,12 +132,12 @@ const MerchantList = () => {
               onPageChange={onPageChange}
               selectionModel={selectionModel}
               onSelectionModelChange={onSelectionModelChange}
-              // handleEditClick={handleEditClick}
-              // handleDeleteClick={handleDeleteClick}
+              handleEditClick={handleEditClick}
+              handleDeleteClick={handleDeleteClick}
               idsPendingDelete={idsPendingDelete}
             />
           </Box>
-          {/* <ConfirmationDialog
+          <ConfirmationDialog
             title={t("Confirm Delete")}
             message={t("Merchant will be deleted")}
             open={dialogSettings.open}
@@ -145,7 +145,7 @@ const MerchantList = () => {
             fullWidth
             handleDismiss={handleDismissDelete}
             handleConfirm={handleConfirmDelete}
-          /> */}
+          />
         </Container>
       </Box>
     </>

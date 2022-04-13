@@ -19,6 +19,28 @@ import AddAdmin from "src/views/AddAdmin";
 import AdminDetails from 'src/views/AdminDetails';
 
 import MerchantList from "src/views/MerchantList";
+import AddMerchant from "src/views/AddMerchant";
+import MerchantDetails from "src/views/MerchantDetails";
+
+import CarOriginList from "src/views/CarOriginList";
+import AddCarOrigin from "src/views/AddCarOrigin";
+import CarOriginDetails from 'src/views/CarOriginDetails';
+
+import CityList from "src/views/CityList";
+import AddCity from "src/views/AddCity";
+import CityDetails from 'src/views/CityDetails';
+
+import SpecialtyList from "src/views/SpecialtyList";
+import AddSpecialty from "src/views/AddSpecialty";
+import SpecialtyDetails from 'src/views/SpecialtyDetails';
+
+import CarBrandList from "src/views/CarBrandList";
+import AddCarBrand from "src/views/AddCarBrand"
+import CarBrandDetails from 'src/views/CarBrandDetails';
+
+import CarModelList from "src/views/CarModelList";
+import AddCarModel from "src/views/AddCarModel"
+import CarModelDetails from "src/views/CarModelDetails"
 
 import UserList from "src/views/UserList";
 
@@ -67,7 +89,49 @@ const routes = (currentUser) => ([
       {
         path: "merchants",
         children: [
-          { path: "/", element: <MerchantList /> }
+          { path: "/", element: <MerchantList /> },
+          { path: "add", element: <AddMerchant /> },
+          { path: "/:id", element: <MerchantDetails /> }
+        ]
+      },
+      {
+        path: "car-origins",
+        children: [
+          { path: "/", element: <CarOriginList /> },
+          { path: "add", element: <AddCarOrigin /> },
+          { path: "/:id", element: <CarOriginDetails /> },
+        ]
+      },
+      {
+        path: "cities",
+        children: [
+          { path: "/", element: <CityList /> },
+          { path: "add", element: <AddCity /> },
+          { path: "/:id", element: <CityDetails /> },
+        ]
+      },
+      {
+        path: "specialties",
+        children: [
+          { path: "/", element: <SpecialtyList /> },
+          { path: "add", element: <AddSpecialty /> },
+          { path: "/:id", element: <SpecialtyDetails /> },
+        ]
+      },
+      {
+        path: "car-brands",
+        children: [
+          { path: "/", element: <CarBrandList /> },
+          { path: "add", element: <AddCarBrand /> },
+          { path: "/:id", element: <CarBrandDetails /> },
+        ]
+      },
+      {
+        path: "car-models",
+        children: [
+          { path: "/", element: <CarModelList /> },
+          { path: "add", element: <AddCarModel /> },
+          { path: "/:id", element: <CarModelDetails /> },
         ]
       },
       {
