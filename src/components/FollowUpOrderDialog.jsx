@@ -17,6 +17,8 @@ import moment from 'moment';
 import ResponsiveReactPlayer from './ResponsiveReactPlayer/ResponsiveReactPlayer'
 import { makeStyles } from '@material-ui/styles';
 import { MapItTextField } from "src/components/common";
+import { useState, useEffect, Fragment } from "react";
+
 
 
 const useStyles = makeStyles({
@@ -35,11 +37,18 @@ const useStyles = makeStyles({
     }
   });
 
-const FollowUpOrderDialog = ({ title,chats, chatData, MerchantName ,handleDismiss, ...rest }) => {
+const FollowUpOrderDialog = ({ title,chats, chatData, rateData ,MerchantName ,handleDismiss, ...rest }) => {
 
     const { t } = useTranslation();
     const classes = useStyles();
     const rowCount = chats?.length
+    // const [state, setState] = useState({ rateState: [] });
+
+    // useEffect(() => {
+    //     setState({
+    //         rateState: rateData
+    //       })
+    //   }, [rateData])
 
     const renderCell = params => (
         <Typography>
@@ -89,12 +98,11 @@ const FollowUpOrderDialog = ({ title,chats, chatData, MerchantName ,handleDismis
                     required={true}
                     select
                 >
-                        <MenuItem key='1' value='1'>
-                            متعاون
+                     {rateData.map((rate) => (
+                        <MenuItem key={rate.id} value={rate.id}>
+                            {rate.name}
                         </MenuItem>
-                        <MenuItem key='2' value='2'>
-                            غشاش
-                        </MenuItem>
+                     ))}
                 </MapItTextField>
             </Grid>
 

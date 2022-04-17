@@ -16,6 +16,7 @@ const api = ({ dispatch, getStore }) => (next) => async (action) => {
 
   try {
     const jwt = AuthService.getJwt();
+    console.log("Countrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrry",localStorage.getItem("country"))
     const response = await axios.request({
       url: baseUrl + url,
       method,

@@ -1,8 +1,8 @@
 {
-  "name": "mapit-frontend",
+  "name": "autoservice-frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://www.mapitsa.com/",
+  "homepage": "https://auto-services-admin.herokuapp.com/",
   "dependencies": {
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.1.5",

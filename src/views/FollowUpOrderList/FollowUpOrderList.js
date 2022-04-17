@@ -20,18 +20,23 @@ const FollowUpOrderList = () => {
   useEffect(() => {
     dispatch(loadFollowupOrders(1));
   }, []);
+  
 
   const FollowUpOrderByChatSessionId = async (row) => {
     try {
-      
+      let rates = await orderService.getRates(row._id)
      let chats = await orderService.FollowUpOrderByChatSessionId(row._id)
+     
       let chatData = {}
       chatData.merchant = row.merchant
       chatData.user = row.inquiry.owner
       chatData.inquiryCode = row.inquiry.inquiryCode
       chatData.carModel = row.inquiry.carModel.name
-      setChatData(chatData) 
+      chatData.rates = rates.data.body
+      setRate(rates.data.body)
+      setChatData(chatData)
      setChatList(chats.data.body.calls)
+
      setDialogSettings({
         open: true,
         id: row._id
@@ -51,6 +56,7 @@ const FollowUpOrderList = () => {
 
   const handleDismissDetails = _ => {
     setChatList([])
+    setRate([])
     setChatData({}) 
     setDialogSettings({
       open: false
@@ -63,6 +69,7 @@ const FollowUpOrderList = () => {
   const [paginatedList, setPaginatedList] = useState([]);
   const [chatList, setChatList] = useState([]);
   const [chatData, setChatData] = useState({});
+  
 
   const [selectionModel, setSelectionModel] = useState([]);
   const prevSelectionModel = useRef(selectionModel);
@@ -109,9 +116,11 @@ const FollowUpOrderList = () => {
     }
   }
 
-
+  const [rate, setRate] = useState([]);
   const [dialogSettings, setDialogSettings] = useState({ open: false });
   const [IdsClicked, setIdsClicked] = useState({});
+
+
 
   return (
     <>
@@ -145,6 +154,7 @@ const FollowUpOrderList = () => {
             title={t("Follow Up Order")}
             chats={chatList}
             chatData={chatData}
+            rateData={rate}
             MerchantName = {t('name')}
             open={dialogSettings.open}
             onClose={handleDismissDetails}

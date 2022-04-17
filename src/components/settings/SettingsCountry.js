@@ -43,6 +43,7 @@ const SettingsCountry = (props) => {
 
   const handleClick = () => {
     localStorage.setItem("country",values.country)
+    window.location.reload();
   };
 
   return (

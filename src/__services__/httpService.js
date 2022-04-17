@@ -36,7 +36,6 @@ function setJwt(jwt) {
   axios.defaults.headers.common["Authorization"] = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2JpbGUiOiIwMDIyMjA5OSIsImlhdCI6MTYzNTg5NTg0MSwiZXhwIjoxOTUxMjU1ODQxfQ.eu8D7aUZ_u-U6zoH41Y4XbRq0wfkBu7kYtVNt1m08c8`;
   axios.defaults.headers.common["country"] = localStorage.getItem("country") || "6184aea034e78407518074e8"
   axios.defaults.headers.common["languageCode"] = 'ar'
-
 }
 
 export default {

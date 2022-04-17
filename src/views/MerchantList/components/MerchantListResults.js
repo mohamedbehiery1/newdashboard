@@ -52,9 +52,9 @@ const MerchantListResults = ({
 
   const renderActionsCell = idsPendingDelete => params => (
     <Box flex={1} display="flex" justifyContent='flex-end'>
-      {/* <IconButton title={t("Edit")} color='secondary' aria-label="edit" onClick={_ => handleEditClick(params.value)}>
+      <IconButton title={t("Edit")} color='secondary' aria-label="edit" onClick={_ => handleEditClick(params.value)}>
         <Edit />
-      </IconButton> */}
+      </IconButton>
       <LoadingButton title={t("Delete")} color='danger' loading={has(idsPendingDelete, params.value)} aria-label="delete" onClick={_ => handleDeleteClick(params.value)}>
         <Delete />
       </LoadingButton>
@@ -67,7 +67,9 @@ const MerchantListResults = ({
   const columns = [
     { field: "name", headerName: t("Name"), width: $COLUMN_WIDTH * 1.1, renderCell },
     { field: "phoneNumber", valueGetter: getPhoneNumber, headerName: t("Phone"), width: $COLUMN_WIDTH, renderCell },
-    { field: "otp",  headerName: t("OTP"), width: $COLUMN_WIDTH * 0.9, renderCell },
+    { field: "version",  headerName: t("Version"), width: $COLUMN_WIDTH * 0.9, renderCell },
+    { field: "appUpdated",  headerName: t("App Updated"), width: $COLUMN_WIDTH * 1.2, valueGetter: (params) =>{ return  params.row.appUpdated  ? t('Yes') : t('No')  },  renderCell },
+    { field: "logOut",  headerName: t("App Loged Out"), width: $COLUMN_WIDTH * 1.2, valueGetter: (params) =>{ return  params.row.logOut  ? t('Yes') : t('No')  },  renderCell },
     { field: "fullName",  headerName: t("Full Name"), width: 180, renderCell },
     { field: "id", resizable: false, disableColumnMenu: true, disableClickEventBubbling: true, headerName: t(" "), renderCell: renderActionsCell(idsPendingDelete), },
   ];

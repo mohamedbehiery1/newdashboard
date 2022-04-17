@@ -84,7 +84,7 @@ export const loadMerchants = (page) => (dispatch, getState) => {
 export const loadMerchantDetails = (id) => (dispatch, getState) => {
   dispatch(
     apiCallStarted({
-      url: `${url}/${id}`,
+      url: `/merchant/${id}`,
       // onStart: merchantsRequested.type,
       onSuccess: merchantDetailsRequestSucceded.type,
       // onError: merchantsRequestFailed.type,

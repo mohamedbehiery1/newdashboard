@@ -52,22 +52,21 @@ const MerchantDetails = ({
     let specialties = await http.get(apiUrl+'/lookup/scrap-type/all')
     if(type == 'edit'){
       if(profileDetails.name){
-        let carBrandsData = await http.get(apiUrl+'/lookup/car-brand/car-origin/'+profileDetails.carBrand.carOrigin)
+        // let carBrandsData = await http.get(apiUrl+'/lookup/car-brand/car-origin/'+profileDetails.carBrand.carOrigin)
         setState({
           ...state,
           submitDisabled: isEmpty(profileDetails),
-          profileDetails: {name_en: profileDetails.name.en, name_ar: profileDetails.name.ar, carOrigin: profileDetails.carBrand.carOrigin, carBrand: profileDetails.carBrand._id },
-          carOrigins: carOriginsData.data.body,
-          carBrands: carBrandsData.data.body,
-          carModels: carBrandsData.data.body,
-          cities: carBrandsData.data.body,          
+          profileDetails: {name_en: profileDetails.name.en, name_ar: profileDetails.name.ar, mobile: profileDetails.mobile, fullName: profileDetails.fullName, speakingLangs: profileDetails.speakingLangs[0], commission: profileDetails.commission, city: profileDetails.city , specialty: profileDetails.scrapTypes, status: profileDetails.status },
+          cities: cities.data.body, 
+          specialties: specialties.data.body,
+          carOrigins: carOriginsData.data.body,         
         })
       }
     }else{
       setState({
         ...state,
         submitDisabled: isEmpty(profileDetails),
-        profileDetails: pick(profileDetails, ['name_en', 'name_ar', 'mobile', 'fullName', 'speakingLangs' ,'carOrigin', 'carBrand', 'carModel', 'city', 'specialty', 'commission' ] ),
+        profileDetails: pick(profileDetails, ['name_en', 'name_ar', 'mobile', 'fullName', 'speakingLangs' ,'carOrigin', 'carBrand', 'carModel', 'city', 'specialty', 'commission', 'status' ] ),
         carOrigins: carOriginsData.data.body,
         cities: cities.data.body,
         specialties: specialties.data.body
@@ -112,7 +111,10 @@ const MerchantDetails = ({
       .label("Commission"),   
     speakingLangs: Joi.string()
     .required("required")
-    .label("Language")               
+    .label("Language"),
+    status: Joi.boolean()
+    .required("required")
+    .label("Status")               
            
   });
   
@@ -151,7 +153,7 @@ const MerchantDetails = ({
     speakingLangs: Joi.string()
       .required("required")
       .label("Language")             
-  }).concat(editValidationSchema)
+  })
 
   const handleChange = (event) => {
     setState({
@@ -209,6 +211,9 @@ const MerchantDetails = ({
     data.commission = state.profileDetails.commission
     data.scrapTypes = state.profileDetails.specialty
     data.carModels = state.profileDetails.carModel
+    if(type == 'edit'){
+      data.status = state.profileDetails.status
+    }
     console.log("Inserted Data", data)
     handleSubmit(data);
   };
@@ -419,6 +424,29 @@ const MerchantDetails = ({
                             ))}
                 </MapItTextField>
             </Grid>
+            {type == 'edit' &&                  
+            <Grid item md={12} xs={12} >
+                  <MapItTextField
+                    label={t("Status")}
+                    name="status"
+                    handleChange={handleChange}
+                    value={type == 'edit' ? state.profileDetails.status || "false" : state.profileDetails.status || "" }
+                    required={true}
+                    select
+
+                    error={state.validationErrors && state.validationErrors.status}
+                    >
+                            
+                                <MenuItem key={'true'} value={'true'}>
+                                    {t("Active")}
+                                </MenuItem>
+                                <MenuItem key={'false'} value={'false'}>
+                                    {t("Blocked")}
+                                </MenuItem>
+                           
+                </MapItTextField>
+            </Grid>
+            }
           </Grid>
         </CardContent>
         <Divider />

@@ -11,9 +11,7 @@ import carModelsReducer from "./carModels";
 import citiesReducer from "./cities";
 import specialtiesReducer from "./specialties";
 import ordersReducer from "./orders";
-import driversReducer from "./drivers";
-import zonesReducer from "./zones";
-import submerchantsReducer from "./submerchants";
+
 
 export default combineReducers({
   bugs: bugsReducer,
@@ -25,10 +23,7 @@ export default combineReducers({
   cities: citiesReducer,
   specialties: specialtiesReducer,
   orders: ordersReducer,
-  submerchants: submerchantsReducer,
-  drivers: driversReducer,
   projects: projectsReducer,
   users: usersReducer,
   preferences: preferencesReducer,
-  zones: zonesReducer,
 });

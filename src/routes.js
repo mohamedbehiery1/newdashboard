@@ -54,13 +54,8 @@ import PrivacyPolicy from "src/views/PrivacyPolicy";
 import AuthLayout from "src/components/auth";
 import { Login } from "src/views/Auth";
 
-import TestLayout from "src/checkout/TestLayout";
-
-import TestPage from 'src/checkout/TestPage';
-
 import LandingLayout from "src/views/Landing/layouts/LandingLayout";
 import Landing from "src/views/Landing/views/Landing";
-import ContactUs from 'src/views/Landing/views/ContactUs';
 
 
 const routes = (currentUser) => ([
@@ -161,7 +156,6 @@ const routes = (currentUser) => ([
     element: currentUser && currentUser.role ? <Navigate to={`/${currentUser.role}`} /> : <AuthLayout />,
     children: [
       { path: "admin", element: <Login role={'admin'} /> },
-      { path: "/", element: <Navigate to="merchant" /> },
       { path: "*", element: <Navigate to="/errors/404" /> },
     ],
   },
@@ -174,14 +168,6 @@ const routes = (currentUser) => ([
       { path: "500", element: <ErrorServerDown /> },
       { path: "/", element: <Navigate to="404" /> },
       { path: "*", element: <Navigate to="404" /> },
-    ],
-  },
-  {
-    path: "test",
-    element: <TestLayout />,
-    children: [
-      { path: "/", element: <TestPage /> },
-      { path: "*", element: <Navigate to="/errors/404" /> },
     ],
   },
 
@@ -205,7 +191,6 @@ const routes = (currentUser) => ([
     path: "/",
     element: <LandingLayout />,
     children: [
-      { path: "contact-us", element: <ContactUs /> },
       { path: "/", element: <Landing /> },
       { path: "*", element: <Navigate to="/" /> },
     ],
